@@ -124,7 +124,7 @@ export default function ProjectsSection() {
               <CardContent className="p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-2xl font-bold text-navy font-korean">{projects[0].title}</h3>
-                  <Badge className="bg-blue-100 text-blue-800">
+                  <Badge className="bg-amber-100 text-amber-800">
                     {projects[0].period}
                   </Badge>
                 </div>
@@ -133,7 +133,7 @@ export default function ProjectsSection() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {projects[0].tags.map((tag, index) => (
-                    <Badge key={index} variant="outline" className="bg-navy/10 text-navy font-korean">
+                    <Badge key={index} variant="outline" className="bg-amber-100/20 text-amber-800 border-amber-400 font-korean">
                       {tag}
                     </Badge>
                   ))}

@@ -68,8 +68,8 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.href)}
                   className={`font-medium transition-colors duration-200 font-korean ${
                     activeSection === item.href.slice(1)
-                      ? "text-navy font-bold"
-                      : "text-slate-custom hover:text-navy"
+                      ? "text-amber-400 font-bold"
+                      : "text-white hover:text-amber-300"
                   }`}
                 >
                   {item.name}
@@ -94,8 +94,8 @@ export default function Navigation() {
                       onClick={() => scrollToSection(item.href)}
                       className={`block w-full text-left px-3 py-2 font-medium transition-colors duration-200 font-korean ${
                         activeSection === item.href.slice(1)
-                          ? "text-navy font-bold"
-                          : "text-slate-custom hover:text-navy"
+                          ? "text-amber-600 font-bold"
+                          : "text-slate-600 hover:text-amber-600"
                       }`}
                     >
                       {item.name}
