@@ -26,24 +26,38 @@ export default function HeroSection() {
               안녕하세요,<br />
               <span className="text-blue-300">개발자</span> 이상엽입니다
             </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed font-korean">
-              7년간의 교육 경험과 다양한 프로젝트를 통해 성장한 풀스택 개발자입니다.
-              현재 B2B 플랫폼 개발을 이끌고 있으며, 기술 교육과 멘토링에도 열정을 가지고 있습니다.
+            <p className="text-xl text-blue-100 mb-6 leading-relaxed font-korean">
+              다양한 기술 스택과 프로젝트 경험을 바탕으로 성장한 개발자입니다.
+              신입 이전부터 끊임없이 학습하며 다양한 분야에 도전해왔습니다.
             </p>
+
+            {/* Personal Info */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-blue-200 font-korean">나이:</span>
+                  <span className="text-white ml-2 font-korean">만 35세 (1989.07.15)</span>
+                </div>
+                <div>
+                  <span className="text-blue-200 font-korean">희망연봉:</span>
+                  <span className="text-white ml-2 font-korean">3,600만원</span>
+                </div>
+              </div>
+            </div>
 
             {/* Key Stats */}
             <div className="grid grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-300">7+</div>
+                <div className="text-2xl font-bold text-blue-300">4+</div>
                 <div className="text-sm text-blue-100 font-korean">년 교육 경험</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-300">10+</div>
-                <div className="text-sm text-blue-100 font-korean">완료 프로젝트</div>
+                <div className="text-2xl font-bold text-blue-300">15+</div>
+                <div className="text-sm text-blue-100 font-korean">개발 프로젝트</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-300">500+</div>
-                <div className="text-sm text-blue-100 font-korean">교육생 배출</div>
+                <div className="text-2xl font-bold text-blue-300">다양한</div>
+                <div className="text-sm text-blue-100 font-korean">기술 경험</div>
               </div>
             </div>
 

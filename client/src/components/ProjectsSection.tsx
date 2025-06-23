@@ -55,6 +55,39 @@ const projects = [
     tags: ["플랫폼 개발", "모빌리티", "창업"],
     image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
   },
+  {
+    title: "개발 학습 프로젝트 (신입 이전)",
+    period: "2017.03 - 2019.09",
+    description: "신입 개발자로 취업하기 전 다양한 기술을 학습하고 경험하기 위해 진행한 개인 프로젝트들입니다. 다양한 분야의 기술 스택을 경험하며 개발 역량을 키웠습니다.",
+    projects: [
+      {
+        name: "데이터 크롤링 & 분석 시스템",
+        description: "Dynamic Crawling으로 데이터를 수집하고 자연어처리(KoNLPy)를 통해 분석, Elasticsearch와 Kibana로 시각화하는 시스템",
+        videoUrl: "https://www.youtube.com/watch?v=EkxdTzDkMv4",
+        techStack: ["Python", "Selenium", "BeautifulSoup", "KoNLPy", "Elasticsearch", "Kibana"]
+      },
+      {
+        name: "태양계 인간관계 시각화 웹앱",
+        description: "친밀도를 기반으로 태양계처럼 인간관계를 시각화하고 통화기록 패턴을 분석하는 웹 애플리케이션",
+        videoUrl: "https://www.youtube.com/watch?v=EkxdTzDkMv4",
+        techStack: ["HTML", "CSS", "JavaScript", "PHP", "Nginx", "Redis"]
+      },
+      {
+        name: "AI 게임 & AR 애플리케이션",
+        description: "DQN 강화학습 슈팅게임, TensorFlow Object Detection, ARCore 바이크 마스크 AR 앱",
+        videoUrl: "https://www.youtube.com/watch?v=EkxdTzDkMv4",
+        techStack: ["Python", "Java", "PyTorch", "TensorFlow", "ARCore", "Pandas"]
+      },
+      {
+        name: "모바일 내비게이션 & 채팅 앱",
+        description: "도로정보 표시/녹화, 통행금지 구역 경고 기능의 내비앱과 TCP/IP 소켓통신 채팅앱",
+        videoUrl: "https://www.youtube.com/watch?v=ZNSTNBZ9rEo",
+        techStack: ["Java", "PHP", "Apache", "MariaDB", "SQLite", "TCP/IP"]
+      },
+    ],
+    tags: ["학습", "다양한 기술 경험", "개인 프로젝트", "습작"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+  },
 ];
 
 export default function ProjectsSection() {
@@ -134,9 +167,15 @@ export default function ProjectsSection() {
                       <span className="text-sm text-slate-custom">{project.period}</span>
                     </div>
                     
+                    {project.description && !project.projects && (
+                      <p className="text-slate-custom mb-4 font-korean">
+                        {project.description}
+                      </p>
+                    )}
+                    
                     <div className="space-y-4">
                       {project.projects?.map((subProject, subIndex) => (
-                        <div key={subIndex}>
+                        <div key={subIndex} className="border-l-4 border-blue-200 pl-4">
                           <h4 className="font-semibold text-navy mb-2 font-korean">
                             {subProject.name}
                             {subProject.period && (
@@ -148,6 +187,28 @@ export default function ProjectsSection() {
                           <p className="text-slate-custom text-sm mb-2 font-korean">
                             {subProject.description}
                           </p>
+                          {subProject.videoUrl && (
+                            <a 
+                              href={subProject.videoUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 text-sm font-korean underline"
+                            >
+                              🎥 시연 영상 보기
+                            </a>
+                          )}
+                          {subProject.techStack && (
+                            <div className="flex flex-wrap gap-1 mt-2">
+                              {subProject.techStack.map((tech, techIndex) => (
+                                <span 
+                                  key={techIndex}
+                                  className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -160,6 +221,8 @@ export default function ProjectsSection() {
                           className={`text-xs font-korean ${
                             project.title.includes('프리랜서') 
                               ? 'bg-green-100 text-green-800' 
+                              : project.title.includes('학습')
+                              ? 'bg-orange-100 text-orange-800'
                               : 'bg-purple-100 text-purple-800'
                           }`}
                         >

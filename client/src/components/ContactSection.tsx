@@ -18,7 +18,7 @@ export default function ContactSection() {
     {
       icon: User,
       title: "이름",
-      content: "이상엽 (1989. 07. 15)",
+      content: "이상엽 (만 35세, 1989.07.15)",
       link: null,
     },
     {
@@ -30,8 +30,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "이메일",
-      content: "lee.sangyeop0715@gmail.com",
-      link: "mailto:lee.sangyeop0715@gmail.com",
+      content: "lee_sangyeop0715@naver.com",
+      link: "mailto:lee_sangyeop0715@naver.com",
     },
     {
       icon: MessageCircle,

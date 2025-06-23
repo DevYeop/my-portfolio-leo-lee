@@ -5,44 +5,44 @@ import { Server, Code, Database, Brain, GraduationCap, Award } from "lucide-reac
 
 const skillCategories = [
   {
-    title: "백엔드",
+    title: "백엔드 개발",
     icon: Server,
     color: "blue",
-    skills: ["Python", "Java", "Node.js", "Django", "Spring Boot"],
+    skills: ["Python", "Java", "Node.js", "PHP", "Apache", "Nginx"],
   },
   {
     title: "프론트엔드",
     icon: Code,
     color: "green",
-    skills: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML/CSS"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Vue.js", "TypeScript"],
   },
   {
-    title: "데이터베이스 & 클라우드",
+    title: "데이터베이스",
     icon: Database,
     color: "purple",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "AWS", "Docker"],
+    skills: ["MySQL", "MariaDB", "SQLite", "PostgreSQL", "Redis", "Elasticsearch"],
   },
   {
-    title: "AI & 데이터",
+    title: "AI & 데이터 분석",
     icon: Brain,
     color: "orange",
-    skills: ["Machine Learning", "TensorFlow", "Pandas", "Data Visualization", "ChatBot"],
+    skills: ["TensorFlow", "PyTorch", "Pandas", "KoNLPy", "OpenCV", "Kibana"],
   },
 ];
 
 const education = [
   {
     title: "컴퓨터공학사",
-    subtitle: "학점은행제 및 독학사 병행",
-    date: "2017.02.22",
-    description: "군 복무 중 취득",
+    subtitle: "학점은행제",
+    date: "취득",
+    description: "",
     icon: GraduationCap,
   },
   {
-    title: "정보처리기사",
-    subtitle: "국가 기술 자격증",
-    date: "2017.05.26",
-    description: "",
+    title: "팀노바 수료인증",
+    subtitle: "개발 교육과정",
+    date: "수료",
+    description: "https://teamnova.co.kr/team2.php",
     icon: Award,
   },
 ];
@@ -99,6 +99,50 @@ export default function SkillsSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Education & Certifications */}
+        {/* Additional Technologies */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-navy text-white rounded-2xl p-8 mb-16"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8 font-korean">추가 기술 경험</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="font-bold text-blue-200 mb-4 font-korean">모바일 & AR</h4>
+              <div className="space-y-2">
+                {["Android", "ARCore", "Google API"].map((tech, index) => (
+                  <Badge key={index} variant="secondary" className="block bg-white/10 text-white px-3 py-2 rounded-lg text-sm">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4 className="font-bold text-blue-200 mb-4 font-korean">프로토콜 & 통신</h4>
+              <div className="space-y-2">
+                {["TCP/IP", "HTTP/HTTPS", "WebRTC", "MPEG-DASH"].map((tech, index) => (
+                  <Badge key={index} variant="secondary" className="block bg-white/10 text-white px-3 py-2 rounded-lg text-sm">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4 className="font-bold text-blue-200 mb-4 font-korean">크롤링 & 자동화</h4>
+              <div className="space-y-2">
+                {["Selenium", "BeautifulSoup", "Webdriver", "데이터 크롤링"].map((tech, index) => (
+                  <Badge key={index} variant="secondary" className="block bg-white/10 text-white px-3 py-2 rounded-lg text-sm">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Education & Certifications */}
         <motion.div
