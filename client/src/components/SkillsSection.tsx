@@ -49,7 +49,7 @@ const education = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -58,8 +58,8 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 font-korean">기술 스택</h2>
-          <p className="text-xl text-slate-custom max-w-3xl mx-auto font-korean">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-korean">기술 스택</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-korean">
             다양한 기술을 활용하여 혁신적인 솔루션을 개발합니다.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export default function SkillsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-gray-50 text-center h-full">
+              <Card className="bg-muted/50 text-center h-full border-border">
                 <CardContent className="p-6">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
                     category.color === 'blue' ? 'bg-blue-100' :
@@ -86,10 +86,10 @@ export default function SkillsSection() {
                       category.color === 'purple' ? 'text-purple-600' : 'text-orange-600'
                     }`} />
                   </div>
-                  <h3 className="text-lg font-bold text-navy mb-4 font-korean">{category.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-4 font-korean">{category.title}</h3>
                   <div className="space-y-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="secondary" className="block bg-white px-3 py-2 rounded-lg text-sm">
+                      <Badge key={skillIndex} variant="secondary" className="block bg-background px-3 py-2 rounded-lg text-sm">
                         {skill}
                       </Badge>
                     ))}
@@ -107,35 +107,35 @@ export default function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-navy text-white rounded-2xl p-8 mb-16"
+          className="bg-gradient-to-br from-amber-500/10 to-orange-600/10 border border-amber-400/20 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-2xl font-bold text-center mb-8 font-korean">추가 기술 경험</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h4 className="font-bold text-blue-200 mb-4 font-korean">모바일 & AR</h4>
+              <h4 className="font-bold text-amber-600 dark:text-amber-400 mb-4 font-korean">모바일 & AR</h4>
               <div className="space-y-2">
                 {["Android", "ARCore", "Google API"].map((tech, index) => (
-                  <Badge key={index} variant="secondary" className="block bg-white/10 text-white px-3 py-2 rounded-lg text-sm">
+                  <Badge key={index} variant="secondary" className="block bg-amber-100/20 dark:bg-amber-900/20 text-foreground px-3 py-2 rounded-lg text-sm border border-amber-400/30">
                     {tech}
                   </Badge>
                 ))}
               </div>
             </div>
             <div>
-              <h4 className="font-bold text-blue-200 mb-4 font-korean">프로토콜 & 통신</h4>
+              <h4 className="font-bold text-amber-600 dark:text-amber-400 mb-4 font-korean">프로토콜 & 통신</h4>
               <div className="space-y-2">
                 {["TCP/IP", "HTTP/HTTPS", "WebRTC", "MPEG-DASH"].map((tech, index) => (
-                  <Badge key={index} variant="secondary" className="block bg-white/10 text-white px-3 py-2 rounded-lg text-sm">
+                  <Badge key={index} variant="secondary" className="block bg-amber-100/20 dark:bg-amber-900/20 text-foreground px-3 py-2 rounded-lg text-sm border border-amber-400/30">
                     {tech}
                   </Badge>
                 ))}
               </div>
             </div>
             <div>
-              <h4 className="font-bold text-blue-200 mb-4 font-korean">크롤링 & 자동화</h4>
+              <h4 className="font-bold text-amber-600 dark:text-amber-400 mb-4 font-korean">크롤링 & 자동화</h4>
               <div className="space-y-2">
                 {["Selenium", "BeautifulSoup", "Webdriver", "데이터 크롤링"].map((tech, index) => (
-                  <Badge key={index} variant="secondary" className="block bg-white/10 text-white px-3 py-2 rounded-lg text-sm">
+                  <Badge key={index} variant="secondary" className="block bg-amber-100/20 dark:bg-amber-900/20 text-foreground px-3 py-2 rounded-lg text-sm border border-amber-400/30">
                     {tech}
                   </Badge>
                 ))}
@@ -150,12 +150,12 @@ export default function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gray-50 rounded-2xl p-8"
+          className="bg-muted/30 rounded-2xl p-8 border border-border"
         >
-          <h3 className="text-2xl font-bold text-navy text-center mb-8 font-korean">교육 & 자격증</h3>
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8 font-korean">교육 & 자격증</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {education.map((item, index) => (
-              <Card key={index} className="bg-white">
+              <Card key={index} className="bg-background border-border">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
@@ -166,12 +166,12 @@ export default function SkillsSection() {
                       }`} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-navy font-korean">{item.title}</h4>
-                      <p className="text-slate-custom text-sm font-korean">{item.subtitle}</p>
+                      <h4 className="font-bold text-foreground font-korean">{item.title}</h4>
+                      <p className="text-muted-foreground text-sm font-korean">{item.subtitle}</p>
                     </div>
                   </div>
-                  <p className="text-slate-custom text-sm font-korean">
-                    {item.date} 취득 {item.description && `(${item.description})`}
+                  <p className="text-muted-foreground text-sm font-korean">
+                    {item.date} {item.description && `${item.description}`}
                   </p>
                 </CardContent>
               </Card>

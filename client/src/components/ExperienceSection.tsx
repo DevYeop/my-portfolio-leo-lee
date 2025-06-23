@@ -54,7 +54,7 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -63,8 +63,8 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 font-korean">경험</h2>
-          <p className="text-xl text-slate-custom max-w-3xl mx-auto font-korean">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-korean">경험</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-korean">
             교육부터 개발까지, 다양한 분야에서의 전문성을 쌓아왔습니다.
           </p>
         </motion.div>
@@ -80,36 +80,36 @@ export default function ExperienceSection() {
                 viewport={{ once: true }}
                 className="timeline-item relative pl-12"
               >
-                <div className={`absolute left-0 top-0 w-8 h-8 rounded-full border-4 border-white shadow-lg flex items-center justify-center ${
-                  experience.color === 'blue' ? 'bg-blue-custom' :
+                <div className={`absolute left-0 top-0 w-8 h-8 rounded-full border-4 border-background shadow-lg flex items-center justify-center ${
+                  experience.color === 'blue' ? 'bg-amber-500' :
                   experience.color === 'green' ? 'bg-green-500' : 'bg-gray-600'
                 }`}>
                   <experience.icon className="h-4 w-4 text-white" />
                 </div>
                 
-                <Card className="shadow-lg border border-gray-100">
+                <Card className="shadow-lg border border-border bg-card">
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <h3 className="text-xl font-bold text-navy font-korean">{experience.title}</h3>
+                      <h3 className="text-xl font-bold text-foreground font-korean">{experience.title}</h3>
                       <Badge variant="secondary" className={`text-sm font-medium ${
-                        experience.color === 'blue' ? 'bg-blue-50 text-blue-custom' :
-                        experience.color === 'green' ? 'bg-green-50 text-green-600' : 'bg-gray-50 text-gray-600'
+                        experience.color === 'blue' ? 'bg-amber-100/20 text-amber-600' :
+                        experience.color === 'green' ? 'bg-green-100/20 text-green-600' : 'bg-gray-100/20 text-gray-600'
                       }`}>
                         {experience.period}
                       </Badge>
                     </div>
                     
-                    <p className="text-slate-custom mb-4 font-korean">{experience.description}</p>
+                    <p className="text-muted-foreground mb-4 font-korean">{experience.description}</p>
                     
                     {experience.subExperiences && (
                       <div className="space-y-3 mb-4">
                         {experience.subExperiences.map((subExp, subIndex) => (
-                          <div key={subIndex} className="border-l-4 border-blue-custom pl-4">
+                          <div key={subIndex} className="border-l-4 border-amber-400 pl-4">
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                              <h4 className="font-semibold text-navy font-korean">{subExp.title}</h4>
-                              <span className="text-sm text-slate-custom">{subExp.period}</span>
+                              <h4 className="font-semibold text-foreground font-korean">{subExp.title}</h4>
+                              <span className="text-sm text-muted-foreground">{subExp.period}</span>
                             </div>
-                            <p className="text-slate-custom text-sm font-korean">{subExp.description}</p>
+                            <p className="text-muted-foreground text-sm font-korean">{subExp.description}</p>
                           </div>
                         ))}
                       </div>
@@ -117,7 +117,7 @@ export default function ExperienceSection() {
                     
                     <div className="flex flex-wrap gap-2">
                       {experience.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="outline" className="bg-navy/10 text-navy font-korean">
+                        <Badge key={tagIndex} variant="outline" className="bg-amber-100/20 text-amber-700 dark:text-amber-400 border-amber-400/30 font-korean">
                           {tag}
                         </Badge>
                       ))}

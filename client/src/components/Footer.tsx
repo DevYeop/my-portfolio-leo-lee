@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-muted/30 border-t border-border text-foreground py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="flex items-center justify-center mb-4">
@@ -11,14 +11,14 @@ export default function Footer() {
             </div>
             <div>
               <div className="text-xl font-bold text-amber-400">Leo.Lee</div>
-              <div className="text-sm text-blue-200 font-korean">이상엽</div>
+              <div className="text-sm text-muted-foreground font-korean">이상엽</div>
             </div>
           </div>
-          <p className="text-blue-100 mb-6 font-korean">
+          <p className="text-muted-foreground mb-6 font-korean">
             용감한 사자처럼 도전하며 혁신적인 솔루션을 만들어갑니다
           </p>
-          <div className="border-t border-amber-800 pt-6">
-            <p className="text-center text-blue-200 font-korean">
+          <div className="border-t border-border pt-6">
+            <p className="text-center text-muted-foreground font-korean">
               © 2025 Leo.Lee (이상엽). All rights reserved.
             </p>
           </div>

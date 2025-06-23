@@ -15,7 +15,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-16 bg-gradient-navy text-white">
+    <section id="home" className="pt-16 bg-gradient-to-br from-background via-background to-muted dark:from-gray-900 dark:via-gray-800 dark:to-black text-foreground">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -43,9 +43,9 @@ export default function HeroSection() {
 
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-korean">
               안녕하세요,<br />
-              <span className="text-amber-300">풀스택 개발자</span> 이상엽입니다
+              <span className="text-amber-400">풀스택 개발자</span> 이상엽입니다
             </h1>
-            <p className="text-xl text-blue-100 mb-6 leading-relaxed font-korean">
+            <p className="text-xl text-muted-foreground mb-6 leading-relaxed font-korean">
               용감한 사자처럼 새로운 기술에 도전하며 성장하는 개발자입니다.
               끊임없는 학습과 혁신으로 최고의 솔루션을 만들어갑니다.
             </p>
@@ -55,50 +55,50 @@ export default function HeroSection() {
               <div className="grid grid-cols-4 gap-4">
                 <div className="text-center">
                   <Code className="w-6 h-6 text-amber-400 mx-auto mb-1" />
-                  <div className="text-xs text-blue-200 font-korean">Frontend</div>
+                  <div className="text-xs text-muted-foreground font-korean">Frontend</div>
                 </div>
                 <div className="text-center">
                   <Database className="w-6 h-6 text-amber-400 mx-auto mb-1" />
-                  <div className="text-xs text-blue-200 font-korean">Backend</div>
+                  <div className="text-xs text-muted-foreground font-korean">Backend</div>
                 </div>
                 <div className="text-center">
                   <Cpu className="w-6 h-6 text-amber-400 mx-auto mb-1" />
-                  <div className="text-xs text-blue-200 font-korean">AI/ML</div>
+                  <div className="text-xs text-muted-foreground font-korean">AI/ML</div>
                 </div>
                 <div className="text-center">
                   <Zap className="w-6 h-6 text-amber-400 mx-auto mb-1" />
-                  <div className="text-xs text-blue-200 font-korean">DevOps</div>
+                  <div className="text-xs text-muted-foreground font-korean">DevOps</div>
                 </div>
               </div>
             </div>
 
             {/* Personal Info */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-4 mb-6 border border-border">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <span className="text-blue-200 font-korean">나이:</span>
-                  <span className="text-white ml-2 font-korean">만 35세 (1989.07.15)</span>
+                  <span className="text-muted-foreground font-korean">나이:</span>
+                  <span className="text-foreground ml-2 font-korean">만 35세 (1989.07.15)</span>
                 </div>
                 <div>
-                  <span className="text-blue-200 font-korean">희망연봉:</span>
-                  <span className="text-amber-300 ml-2 font-korean font-bold">3,600만원</span>
+                  <span className="text-muted-foreground font-korean">희망연봉:</span>
+                  <span className="text-amber-400 ml-2 font-korean font-bold">3,600만원</span>
                 </div>
               </div>
             </div>
 
             {/* Key Stats with Professional Design */}
             <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="text-center bg-black/20 rounded-lg p-4 border border-amber-400/20">
-                <div className="text-2xl font-bold text-amber-300">4+</div>
-                <div className="text-sm text-blue-100 font-korean">년 교육 경험</div>
+              <div className="text-center bg-card/50 rounded-lg p-4 border border-amber-400/20">
+                <div className="text-2xl font-bold text-amber-400">4+</div>
+                <div className="text-sm text-muted-foreground font-korean">년 교육 경험</div>
               </div>
-              <div className="text-center bg-black/20 rounded-lg p-4 border border-amber-400/20">
-                <div className="text-2xl font-bold text-amber-300">20+</div>
-                <div className="text-sm text-blue-100 font-korean">개발 프로젝트</div>
+              <div className="text-center bg-card/50 rounded-lg p-4 border border-amber-400/20">
+                <div className="text-2xl font-bold text-amber-400">20+</div>
+                <div className="text-sm text-muted-foreground font-korean">개발 프로젝트</div>
               </div>
-              <div className="text-center bg-black/20 rounded-lg p-4 border border-amber-400/20">
-                <div className="text-2xl font-bold text-amber-300">다양한</div>
-                <div className="text-sm text-blue-100 font-korean">기술 경험</div>
+              <div className="text-center bg-card/50 rounded-lg p-4 border border-amber-400/20">
+                <div className="text-2xl font-bold text-amber-400">다양한</div>
+                <div className="text-sm text-muted-foreground font-korean">기술 경험</div>
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export default function HeroSection() {
             className="relative"
           >
             {/* Professional Leo Design */}
-            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl p-8 shadow-2xl">
+            <div className="relative bg-gradient-to-br from-card via-muted to-background rounded-2xl p-8 shadow-2xl border border-border">
               {/* Circuit Board Pattern Background */}
               <div className="absolute inset-0 opacity-10">
                 <svg viewBox="0 0 400 300" className="w-full h-full">

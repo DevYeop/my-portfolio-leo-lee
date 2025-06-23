@@ -105,7 +105,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -114,8 +114,8 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 font-korean">프로젝트</h2>
-          <p className="text-xl text-slate-custom max-w-3xl mx-auto font-korean">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-korean">프로젝트</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-korean">
             다양한 분야에서 진행한 프로젝트들을 소개합니다.
           </p>
         </motion.div>
@@ -128,7 +128,7 @@ export default function ProjectsSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="project-card overflow-hidden shadow-lg lg:col-span-2">
+            <Card className="project-card overflow-hidden shadow-lg lg:col-span-2 bg-card border-border">
               <img
                 src={projects[0].image}
                 alt="Modern tech office collaboration"
@@ -136,12 +136,12 @@ export default function ProjectsSection() {
               />
               <CardContent className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-navy font-korean">{projects[0].title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground font-korean">{projects[0].title}</h3>
                   <Badge className="bg-amber-100 text-amber-800">
                     {projects[0].period}
                   </Badge>
                 </div>
-                <p className="text-slate-custom mb-6 text-lg font-korean">
+                <p className="text-muted-foreground mb-6 text-lg font-korean">
                   {projects[0].description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -151,7 +151,7 @@ export default function ProjectsSection() {
                     </Badge>
                   ))}
                 </div>
-                <div className="text-sm text-slate-custom font-korean">
+                <div className="text-sm text-muted-foreground font-korean">
                   <strong>역할:</strong> {projects[0].role}
                 </div>
               </CardContent>
@@ -168,7 +168,7 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="project-card overflow-hidden shadow-lg h-full">
+                <Card className="project-card overflow-hidden shadow-lg h-full bg-card border-border">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -176,28 +176,28 @@ export default function ProjectsSection() {
                   />
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-bold text-navy font-korean">{project.title}</h3>
-                      <span className="text-sm text-slate-custom">{project.period}</span>
+                      <h3 className="text-xl font-bold text-foreground font-korean">{project.title}</h3>
+                      <span className="text-sm text-muted-foreground">{project.period}</span>
                     </div>
                     
                     {project.description && !project.projects && (
-                      <p className="text-slate-custom mb-4 font-korean">
+                      <p className="text-muted-foreground mb-4 font-korean">
                         {project.description}
                       </p>
                     )}
                     
                     <div className="space-y-4">
                       {project.projects?.map((subProject, subIndex) => (
-                        <div key={subIndex} className="border-l-4 border-blue-200 pl-4">
-                          <h4 className="font-semibold text-navy mb-2 font-korean">
+                        <div key={subIndex} className="border-l-4 border-amber-400/30 pl-4">
+                          <h4 className="font-semibold text-foreground mb-2 font-korean">
                             {subProject.name}
                             {subProject.period && (
-                              <span className="text-xs text-slate-custom ml-2">
+                              <span className="text-xs text-muted-foreground ml-2">
                                 ({subProject.period})
                               </span>
                             )}
                           </h4>
-                          <p className="text-slate-custom text-sm mb-2 font-korean">
+                          <p className="text-muted-foreground text-sm mb-2 font-korean">
                             {subProject.description}
                           </p>
                           {subProject.videoUrl && (
@@ -205,7 +205,7 @@ export default function ProjectsSection() {
                               href={subProject.videoUrl} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="text-blue-600 hover:text-blue-800 text-sm font-korean underline"
+                              className="text-amber-600 hover:text-amber-800 text-sm font-korean underline"
                             >
                               🎥 시연 영상 보기
                             </a>
@@ -215,7 +215,7 @@ export default function ProjectsSection() {
                               {subProject.techStack.map((tech, techIndex) => (
                                 <span 
                                   key={techIndex}
-                                  className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded"
+                                  className="text-xs px-2 py-1 bg-muted text-muted-foreground rounded"
                                 >
                                   {tech}
                                 </span>
