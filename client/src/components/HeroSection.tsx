@@ -93,7 +93,7 @@ export default function HeroSection() {
                 <div className="text-sm text-blue-100 font-korean">년 교육 경험</div>
               </div>
               <div className="text-center bg-black/20 rounded-lg p-4 border border-amber-400/20">
-                <div className="text-2xl font-bold text-amber-300">15+</div>
+                <div className="text-2xl font-bold text-amber-300">20+</div>
                 <div className="text-sm text-blue-100 font-korean">개발 프로젝트</div>
               </div>
               <div className="text-center bg-black/20 rounded-lg p-4 border border-amber-400/20">

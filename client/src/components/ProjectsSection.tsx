@@ -13,6 +13,19 @@ const projects = [
     featured: true,
   },
   {
+    title: "현재 개발 프로젝트",
+    period: "2024.12 - 현재",
+    projects: [
+      {
+        name: "Vaultin - 텍스트 저장 앱",
+        description: "React Native로 개발 중인 텍스트 스크랩 앱입니다. 웹서핑 중 마음에 드는 글귀나 정보를 공유 버튼으로 바로 저장할 수 있습니다. 안드로이드 공유 확장 기능을 지원하여 크롬, 인스타그램, 트위터 등 다양한 앱에서 즉시 텍스트를 보낼 수 있으며, 향후 카테고리 분류, 웹 버전 연동, 검색 기능 등을 추가할 예정입니다.",
+        techStack: ["React Native", "Android", "공유 확장", "MVP", "APK 배포"]
+      },
+    ],
+    tags: ["React Native", "모바일 앱", "현재 진행"],
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+  },
+  {
     title: "프리랜서 개발",
     period: "2023.01 - 2024.05",
     projects: [
@@ -56,9 +69,9 @@ const projects = [
     image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
   },
   {
-    title: "개발 학습 프로젝트 (신입 이전)",
+    title: "개인 개발 프로젝트",
     period: "2017.03 - 2019.09",
-    description: "신입 개발자로 취업하기 전 다양한 기술을 학습하고 경험하기 위해 진행한 개인 프로젝트들입니다. 다양한 분야의 기술 스택을 경험하며 개발 역량을 키웠습니다.",
+    description: "다양한 기술 스택을 활용하여 실무 경험을 쌓기 위해 진행한 개인 프로젝트들입니다. AI부터 모바일 앱까지 폭넓은 분야에 도전하며 기술 역량을 확장했습니다.",
     projects: [
       {
         name: "데이터 크롤링 & 분석 시스템",
@@ -85,7 +98,7 @@ const projects = [
         techStack: ["Java", "PHP", "Apache", "MariaDB", "SQLite", "TCP/IP"]
       },
     ],
-    tags: ["학습", "다양한 기술 경험", "개인 프로젝트", "습작"],
+    tags: ["개인 프로젝트", "다양한 기술 스택", "AI", "모바일"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
   },
 ];
@@ -221,7 +234,9 @@ export default function ProjectsSection() {
                           className={`text-xs font-korean ${
                             project.title.includes('프리랜서') 
                               ? 'bg-green-100 text-green-800' 
-                              : project.title.includes('학습')
+                              : project.title.includes('현재')
+                              ? 'bg-blue-100 text-blue-800'
+                              : project.title.includes('개인')
                               ? 'bg-orange-100 text-orange-800'
                               : 'bg-purple-100 text-purple-800'
                           }`}
